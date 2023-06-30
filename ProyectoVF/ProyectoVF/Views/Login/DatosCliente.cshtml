@@ -1,0 +1,47 @@
+﻿@model ProyectoVF.Models.Cliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Datos del Cliente</h1>
+    <p>Id: @Model.IdCliente</p>
+    <p>Correo: @Model.DireccionCliente</p>
+    <p>Nombre: @Model.NombreCliente</p>
+    <p>Apellido: @Model.ApellidoCliente</p>
+    
+        <h2>Compras Realizadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venta in ViewData["compras"] as List<Ventum>)
+                {
+                    <tr>
+                        <td>@venta.IdVenta</td>
+                        <td>@venta.FechaVenta</td>
+                        <td>@venta.MontoVenta</td>
+                        <td>@venta.EstadoVenta</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+
+    <form asp-controller="Main" asp-action="Index">
+        <input type="submit" value="Regresar" asp-controller="Main" asp-action="Index" />
+        <input type="submit" value="Cerrar Sesión" asp-controller="Login" asp-action="CerrarSesion" />
+    </form>
+</body>
+</html>

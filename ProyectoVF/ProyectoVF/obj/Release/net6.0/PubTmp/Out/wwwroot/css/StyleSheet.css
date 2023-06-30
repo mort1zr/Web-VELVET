@@ -1,0 +1,118 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 250px;
+    max-width: 250px;
+    height: 250px;
+    max-height: 250px;
+}
+
+body {
+    font-family: "Oswald";
+}
+
+.Cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #190E23;
+    padding: 20px;
+}
+
+    .Cabecera img {
+        max-width: 2000px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        margin: 0 10px;
+        padding: 5px;
+    }
+
+        nav a.NmStore {
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #0a5475;
+        }
+
+    nav svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px;
+}
+
+
+
+h3 {
+    font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Century;
+}
+
+
+.TODO {
+    background-image: url(https://i.pinimg.com/236x/ba/13/d4/ba13d47777bf8ed8c8244b380c8e76f0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: calc(50% - 30px);
+    max-width: 280px;
+    height: 450px;
+    max-height: 5000px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 15px 0;
+    }
+}

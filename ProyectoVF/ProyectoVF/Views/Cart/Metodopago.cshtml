@@ -1,0 +1,142 @@
+﻿@model ProyectoVF.Models.Ventum
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   // var idVenta = (int)TempData.Get("IdVenta");
+}
+<html>
+<head>
+</head>
+<body>
+    <div class="metodos-pago">
+        <p>Total: @ViewBag.MontoTotal</p>
+        <p>Id: @Model.IdCliente</p>
+        <p>Fecha de venta: @Model.FechaVenta.Value.ToShortDateString()</p>
+        <h2>Métodos de Pago</h2>
+        <ul>
+            <li>
+                <input type="radio" id="pago-visa" name="metodo-pago" value="visa">
+                <label for="pago-visa">
+                    <img src="tarjeta_visa.png" alt="Visa">
+                    <span>Visa</span>
+                </label>
+                <div id="info-pago-visa" class="info-pago" style="display: none;">
+                    <h3>Información de Pago</h3>
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta-visa" required>
+
+                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                    <input type="text" id="fecha-expiracion-visa" required>
+
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc-visa" required>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="pago-mastercard" name="metodo-pago" value="mastercard">
+                <label for="pago-mastercard">
+                    <img src="" alt="Mastercard">
+                    <span>Mastercard</span>
+                </label>
+                <div id="info-pago-mastercard" class="info-pago" style="display: none;">
+                    <h3>Información de Pago</h3>
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta-mastercard" required>
+
+                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                    <input type="text" id="fecha-expiracion-mastercard" required>
+
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc-mastercard" required>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="pago-amex" name="metodo-pago" value="amex">
+                <label for="pago-amex">
+                    <img src="tarjeta_amex.png" alt="American Express">
+                    <span>American Express</span>
+                </label>
+                <div id="info-pago-amex" class="info-pago" style="display: none;">
+                    <h3>Información de Pago</h3>
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta-amex" required>
+
+                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                    <input type="text" id="fecha-expiracion-amex" required>
+
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc-amex" required>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="pago-discover" name="metodo-pago" value="discover">
+                <label for="pago-discover">
+                    <img src="tarjeta_discover.png" alt="Discover">
+                    <span>Discover</span>
+                </label>
+                <div id="info-pago-discover" class="info-pago" style="display: none;">
+                    <h3>Información de Pago</h3>
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta-discover" required>
+
+                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                    <input type="text" id="fecha-expiracion-discover" required>
+
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc-discover" required>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <form asp-action="Detalles" asp-controller="Cart" method="post">
+        <input type="hidden" asp-for="IdCliente" value="@Model.IdCliente" />
+        <input type="hidden" name="MontoVenta" value="@Model.MontoVenta" />
+        <input type="hidden" asp-for="FechaVenta" value="@Model.FechaVenta" />
+        <input type="hidden" asp-for="EstadoVenta" value="Realizado" />
+        <input type="submit" value="Regresar al carro" asp-controller="Cart" asp-action="CartDetails" />
+        <input type="submit" value="Pagar" disabled />
+    </form>
+    
+    
+</body>
+</html>
+<script>
+    const formulario = document.querySelector("form");
+    const metodosPago = document.querySelectorAll("[name='metodo-pago']");
+    const formulariosPago = document.querySelectorAll('.info-pago');
+    const botonPagar = document.querySelector('input[type="submit"][value="Pagar"]');
+
+    function mostrarInfoPago() {
+        const opcionSeleccionada = document.querySelector('input[name="metodo-pago"]:checked');
+        const formularioSeleccionado = document.getElementById("info-pago-" + opcionSeleccionada.value);
+
+        formulariosPago.forEach(formulario => {
+            formulario.style.display = "none";
+        });
+
+        formularioSeleccionado.style.display = "block";
+        verificarCamposPago(formularioSeleccionado);
+    }
+
+    function verificarCamposPago(formulario) {
+        const camposPago = formulario.querySelectorAll("input[required]");
+        const camposCompletos = Array.from(camposPago).every(campo => campo.value.trim() !== "");
+        botonPagar.disabled = !camposCompletos;
+    }
+
+    metodosPago.forEach(metodo => metodo.addEventListener("change", mostrarInfoPago));
+
+    formulario.addEventListener("submit", function (event) {
+        const formularioSeleccionado = document.querySelector('.info-pago[style="display: block;"]');
+        if (formularioSeleccionado) {
+            verificarCamposPago(formularioSeleccionado);
+            if (!botonPagar.disabled) {
+                return;
+            }
+        }
+        event.preventDefault();
+    });
+
+    mostrarInfoPago();
+</script>

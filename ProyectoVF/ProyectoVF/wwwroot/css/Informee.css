@@ -1,0 +1,59 @@
+﻿body {
+    background-color: #808080; /* Color plomo */
+    background-image: url('ruta/de/la/imagen.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.report-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.report-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.report {
+    margin-bottom: 20px;
+}
+
+    .report label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .report input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background-color: #45a049;
+    }

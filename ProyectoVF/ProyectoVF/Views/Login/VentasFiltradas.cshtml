@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ProyectoVF.Models.Ventum>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        @foreach (var x in Model)
+        {
+            <div class="card">
+                <h3>@x.IdVenta</h3>
+                <h3>@x.MontoVenta</h3>
+                <h3>@x.FechaVenta</h3>
+                <h3>@x.EstadoVenta</h3>
+            </div>
+        }
+    </body>
+</html>

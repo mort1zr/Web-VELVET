@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="~/css/Contacto.css" />
+</head>
+<body>
+    <form action="https://formsubmit.co/aaronov23@gmail.com" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="Nombre" id="nombre" required />
+        </div>
+        <div>
+            <label for="gmail">Gmail:</label>
+            <input type="email" name="Gmail" id="gmail" required>
+        </div>
+        <button type="submit">Enviar</button>
+
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nuevo Contacto">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://localhost:7241/Proyecto/Contacto">
+
+        <input type="button" value="regresar" asp-controller="Main" asp-action="Index" />
+    </form>
+</body>
+</html>

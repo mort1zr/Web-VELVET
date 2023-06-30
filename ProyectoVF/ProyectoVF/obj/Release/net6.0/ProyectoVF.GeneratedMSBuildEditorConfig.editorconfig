@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoVF
+build_property.RootNamespace = ProyectoVF
+build_property.ProjectDir = C:\Users\AARON\Documents\Ciclo III\Desarrollo Basado en Plataformas\Proyectos\ProyectoVF\ProyectoVF\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\AARON\Documents\Ciclo III\Desarrollo Basado en Plataformas\Proyectos\ProyectoVF\ProyectoVF
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Cart/CartDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Cart/Metodopago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxNZXRvZG9wYWdvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Cart/Piolas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxQaW9sYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Cart/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Catalogo/Catalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cQ2F0YWxvZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Catalogo/Modificar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cTW9kaWZpY2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Login/DatosCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRGF0b3NDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Login/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Main/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxEZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Proyecto/Contacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJveWVjdG9cQ29udGFjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Proyecto/Informe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJveWVjdG9cSW5mb3JtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AARON/Documents/Ciclo III/Desarrollo Basado en Plataformas/Proyectos/ProyectoVF/ProyectoVF/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h3sq7qub9y

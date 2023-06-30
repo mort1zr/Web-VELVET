@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Informee.css" />
+    <h4>VELVET</h4>
+    <title>Sección de Reportes</title>
+
+</head>
+<body>
+    <div class="report-container">
+        <h2 class="report-title">Sección de Reportes</h2>
+
+        <div class="report">
+            <label for="report-name">Describa el problema que ha presentado:</label>
+            <input type="text" id="report-name">
+        </div>
+        <a class="btn btn-success" asp-action="Contacto" asp-controller="Proyecto">Generar Reporte</a>
+    </div>
+</body>
+</html>

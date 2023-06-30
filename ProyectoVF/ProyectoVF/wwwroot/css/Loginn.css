@@ -1,0 +1,83 @@
+﻿* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: Raleway;
+    background: url(https://p4.wallpaperbetter.com/wallpaper/615/426/393/5bd100ccb0983-wallpaper-preview.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-box {
+    width: 400px; 
+    padding: 2em 2.5em;
+    background-color: #fff;
+    border-radius: 0.7em; 
+    border: 2px solid #808080; 
+    color: #777;
+}
+
+.form-control {
+    border-radius: 0.1875em;
+    background-color: #eee;
+    color: #777;
+    padding: 0.25em 0.625em;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #33cc77;
+    color: #fff;
+    padding: 0.25em 1.5em;
+    display: block;
+    margin: 0 auto;
+}
+
+.no-log {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.text-button {
+    display: inline-block;
+    margin: 0;
+    color: #333;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+}
+
+.text-muted {
+    margin-top: 10px;
+    color: #999;
+}
+
+.text-dark {
+    margin-top: 10px;
+    text-align: center;
+}

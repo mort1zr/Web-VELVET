@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProyectoVF.Models.Ventum>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <header>
+            <h1>
+                VENTAS REALIZADAS
+            </h1>
+        </header>
+        <form asp-action="Filtrar" asp-controller="Login">
+            <label>Fecha inicio</label>
+            <input type="date" name="fechainicio" />
+            <label>Fecha fin</label>
+            <input type="date" name="fechafin" />
+            <input type="submit" value="Limitar" />
+        </form>
+
+
+
+        @foreach (var x in Model)
+        {
+            <div class="card">
+                <h3>@x.IdVenta</h3>
+                <h3>@x.MontoVenta</h3>
+                <h3>@x.FechaVenta</h3>
+                <h3>@x.EstadoVenta</h3>
+            </div>
+        }
+    </body>
+</html>

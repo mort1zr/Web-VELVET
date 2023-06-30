@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ProyectoVF.Models.Carro>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //bool isLoggedIn = ViewBag.IsLoggedIn;
+}
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/CartDetails.css" />
+</head>
+<body>
+    <header>
+        <h1>CARRITO DE COMPRAS</h1>
+        <div class="Total">Precio total: <span id="total"></span></div>
+        <form>
+        <input type="submit" value="Procesar Compra" asp-controller="Cart" asp-action="Metodopago"/>
+        </form>
+    </header>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr class="table-primary">
+                <td><strong>ID</strong></td>
+                <td><strong>NOMBRE</strong></td>
+                <td><strong>DESCRIPCION</strong></td>
+                <td><strong>PRECIO</strong></td>
+                <td><strong>CANTIDAD</strong></td>
+                <td><strong>ELIMINAR</strong></td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr class="table-light">
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td><span class="precio-individual" id="precio-@item.ID">@item.Precio</span></td>
+                    <td>
+                        <form>
+                            <select name="cantidad" id="cantidad-@item.ID">
+                                @for (int i = 1; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ID" class="btn btn-danger" data-method="post">Eliminar</a>
+                    </td>
+
+                </tr>
+            }
+        </table>
+        <a class="btn btn-primary" asp-controller="Main" asp-action="Index">Regresar</a>
+    </div>
+</body>
+</html>
+<script>
+
+    var preciosIniciales = {};
+    @foreach (var item in Model)
+    {
+        <text>preciosIniciales[@item.ID] = @item.Precio; </text>
+    }
+
+
+        function actualizarPrecioTotal() {
+            var precioTotal = 0;
+    @foreach (var item in Model)
+    {
+        <text>
+                                var cantidad = document.getElementById('cantidad-@item.ID').value;
+                var precio = preciosIniciales[@item.ID] * cantidad;
+                precioTotal += precio;
+                document.getElementById('precio-@item.ID').textContent = precio;
+        </text>
+    }
+                document.getElementById('total').textContent = precioTotal;
+        }
+
+    @foreach (var item in Model)
+    {
+        <text>
+            document.getElementById('cantidad-@item.ID').addEventListener('change', function () {
+                actualizarPrecioTotal();
+            });
+        </text>
+    }
+        actualizarPrecioTotal();
+</script>

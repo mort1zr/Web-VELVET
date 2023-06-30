@@ -1,0 +1,22 @@
+﻿@model ProyectoVF.Models.Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+</head>
+<body>
+    <h1>MODIFICAR PRODUCTO</h1>
+    <form asp-controller="Catalogo" asp-action="changeDetails" method="post">
+        <input type="hidden" asp-for="IdProducto" placeholder="Ingresar Codigo" />
+        <input type="text" asp-for="NombreProducto" placeholder="Ingresa Nombre" />
+        <input type="text" asp-for="PrecioProducto" placeholder="Ingresar Precio" />
+        <input type="text" asp-for="DesProducto" placeholder="Descripcion del producto" />
+        <input type="number" asp-for="IdCategoria" placeholder="Categoria" />
+        <input type="number" asp-for="StockProducto" placeholder="ESTOCK asjdsa" />
+        <input type="submit" value="Modificar" />
+    </form>
+</body>
+</html>

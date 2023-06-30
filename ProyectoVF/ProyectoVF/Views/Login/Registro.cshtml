@@ -1,0 +1,31 @@
+﻿@model ProyectoVF.Models.Cliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Register.css" />
+</head>
+<body>
+    <div class="Tittle">
+        <h1>Resgistro</h1>
+    </div>
+
+    
+    <form asp-controller="Login" asp-action="Crear">
+        <div class="Datos">
+            <input type="hidden" asp-for="IdCliente" />
+            <input type="text" asp-for="DireccionCliente" placeholder="Correo electrónico" />
+            <input type="text" asp-for="NombreCliente" placeholder="Nombre" />
+            <input type="text" asp-for="ApellidoCliente" placeholder="Apellido" />
+            <input type="text" asp-for="PasswordCliente" placeholder="Contraseña" />
+            <input type="submit" value="Registrarse" />
+            <input type="submit" value="Regresar" asp-controller="Main" asp-action="Index" />
+            
+        </div>
+    </form>
+</body>
+</html>

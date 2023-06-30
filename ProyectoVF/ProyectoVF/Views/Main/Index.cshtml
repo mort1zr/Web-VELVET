@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProyectoVF.Models.Product>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <div class="TODO">
+        <div class="Cabecera">
+            <img src="https://www.velvetboutique.gr/wp-content/uploads/2022/09/logo-velvetboutique-v1-450px.png" alt="ImagenVelvet" />
+            <header>
+                <nav>
+                    <a href="#" class="NmStore">VELVET</a>
+                    <a asp-controller="Catalogo" asp-action="Catalogo">CATÁLOGO</a>
+                    <a asp-controller="Login" asp-action="Login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
+                    </a>
+                    <a asp-controller="Cart" asp-action="CartDetails">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L22.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        <a asp-action="Informe" asp-controller="Proyecto">☰</a>
+                    </a>
+                </nav>
+            </header>
+        </div>
+        <h2 class="mt-5">PRODUCTOS</h2>
+        <div class="container card-container">
+            @foreach (var item in Model.Take(8))
+            {
+                <div class="row">
+                    <div class="card" style="width: 15rem; height: 25rem">
+                        <div class="card-header">
+                            <a asp-action="Detalle" asp-route-id="@item.IdProducto">
+                                <img src="@item.ImgProducto" class="card-img-top" title="@item.NombreProducto" style="height: 200px; width: 150px">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="card-text">@item.IdProducto</h5>
+                            <h5 class="card-text">@item.PrecioProducto</h5>
+                            <h5 class="card-text">@item.NombreProducto</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

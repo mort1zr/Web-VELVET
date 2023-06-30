@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ProyectoVF.Models.Product>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="TODO">
+        <div class="Cabecera">
+            <img src="https://www.velvetboutique.gr/wp-content/uploads/2022/09/logo-velvetboutique-v1-450px.png" alt="ImagenVelvet" />
+            <header>
+                @*Barra de navegacion que contiene botones utiles como el Login y Cart(Carrito)*@
+                <nav>
+                    <a asp-controller="Main" asp-action="Index" class="NmStore">VELVET</a>
+                </nav>
+            </header>
+        </div>
+        <h2>PRODUCTOS</h2>
+        <h4><input type="text" id="myInput" class="form-control" placeholder="Buscar..." /></h4>
+        <form asp-controller="Catalogo" asp-action="Catalogo" method="get">
+            <select name="filtro">
+                <option value="Id">Ordenar por id</option>
+                <option value="precio">Ordenar por precio</option>
+                <option value="categoria">Ordenar por categoria</option>
+                <option value="Nombre">Ordenar por nombre</option>
+            </select>
+            <button type="submit">Ordenar</button>
+        </form>
+        <div class="container">
+            <div class="card-container">
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="card" style="width: 15rem; height: 25rem">
+                            <div class="card-header">
+                                <a asp-action="Detalle" asp-controller="Main" asp-route-id="@item.IdProducto">
+                                    <img src="@item.ImgProducto" class="card-img-top" title="@item.NombreProducto" style="height: 200px; width: 150px">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h5 class="card-text">@item.IdProducto</h5>
+                                <h5 class="card-text">@item.PrecioProducto</h5>
+                                <h5 class="card-text">@item.NombreProducto</h5>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        
+        var originalOrder = $(".card-container .card").toArray();
+
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $(".card-container").empty();
+
+            
+            var filteredCards = originalOrder.filter(function (card) {
+                return $(card).text().toLowerCase().indexOf(value) > -1;
+            });
+
+            
+            $(".card-container").append(filteredCards);
+        });
+    });
+</script>
